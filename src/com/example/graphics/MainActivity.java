@@ -20,6 +20,15 @@ public class MainActivity extends Activity {
 			// custom drawing code here
 			Paint paint = new Paint();
 			paint.setStyle(Paint.Style.FILL);
+			
+
+			// draw BLACK rectangle with anti aliasing turned off
+			paint.setAntiAlias(false);
+			paint.setColor(Color.BLACK);
+			canvas.drawRect(100, 5, 200, 30, paint);
+			
+
+
 
 		}
 	
