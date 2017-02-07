@@ -10,29 +10,15 @@ import android.view.MenuItem;
 
 
 public class MainActivity extends Activity {
-
+	DemoView demo;
     @Override
- 
-        protected void onDraw(Canvas canvas)
-		{
-			super.onDraw(canvas);
 
-			// custom drawing code here
-			Paint paint = new Paint();
-			paint.setStyle(Paint.Style.FILL);
-			
-
-			// draw BLACK rectangle with anti aliasing turned off
-			paint.setAntiAlias(false);
-			paint.setColor(Color.BLACK);
-			canvas.drawRect(100, 5, 200, 30, paint);
-			
-
-
-
-		}
-	
-    }
+    protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		demo = new DemoView(this);
+		setContentView(demo);
+     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
