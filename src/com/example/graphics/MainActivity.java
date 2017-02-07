@@ -1,6 +1,9 @@
 package com.example.graphics;
 
 import android.app.Activity;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,9 +12,17 @@ import android.view.MenuItem;
 public class MainActivity extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+ 
+        protected void onDraw(Canvas canvas)
+		{
+			super.onDraw(canvas);
+
+			// custom drawing code here
+			Paint paint = new Paint();
+			paint.setStyle(Paint.Style.FILL);
+
+		}
+	
     }
 
     @Override
